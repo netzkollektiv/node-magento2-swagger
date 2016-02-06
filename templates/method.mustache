@@ -19,6 +19,10 @@
     var body;
     var queryParameters = {};
     var headers = {};
+    if (this.token.value !== undefined) {
+        headers['Authorization'] = 'Bearer ' + this.token.value;
+    }
+
     var form = {};
 
     {{#isSecure}}

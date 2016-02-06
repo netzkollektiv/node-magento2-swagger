@@ -18,9 +18,7 @@ var {{&className}} = (function(){
         if(this.domain.length === 0) {
             throw new Error('Domain parameter must be specified as a string.');
         }
-        {{#isSecure}}
-            this.token = (typeof options === 'object') ? (options.token ? options.token : {}) : {};
-        {{/isSecure}}
+        this.token = (typeof options === 'object') ? (options.token ? options.token : {}) : {};
     }
 
     {{#isSecure}}

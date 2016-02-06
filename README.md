@@ -21,3 +21,18 @@ magento.catalogCategoryManagementV1GetTreeGet().done(function (response) {
   console.log(response.body);
 });
 ```
+
+## Authenticated Example
+
+The authenticated example also provides the API with a Authorization Bearer header (token value).
+
+```js
+new magentoSwagger({
+    domain: 'http://example.com/index.php/rest',
+    token: {
+        value: token
+    }
+});
+```
+
+See complete example of usage in examples/customer.js
